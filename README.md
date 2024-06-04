@@ -1,5 +1,5 @@
 # gpu_monitor
-Nvidia gpu monitoring tool based on Python gspread library
+NVIDIA GPU monitoring tool based on Python and the gspread library.
 
 ![Example image](./assets/example.png)
 
@@ -9,13 +9,14 @@ Nvidia gpu monitoring tool based on Python gspread library
 > How to run
 
 ### TODO
-1. Support docker environment
+1. Support Docker environment
 
 ## Getting Started
-Before getting started, you need to get google spreadsheet auth token (refer to the link below)
+Before getting started, you need to obtain a Google Spreadsheet auth token (refer to the link below):
 
 https://docs.gspread.org/en/latest/
 
+1. Place the auth token JSON file in the topmost directory ('service_account.json').
 
 1. Install dependencies
 ```sh
@@ -23,12 +24,13 @@ pip install -r requirements.txt
 ```
 
 2. Modify the config.yaml file
-- --`json_path`: Auth token from google spreadsheet API
-- --`start_cell`: Starting cell for loggin gpu stats
-- --`num_gpus`: The number of total gpus in node
-- --`sleep_time`: sleeping time between each API call (to prevent API limit exceed)
-- --`spreadsheet_name`: Name of spreadsheet document
-- --`worksheet_name`: Name of worksheet (see bottom left)
+- --`json_path`: Auth token from Google Spreadsheet API.
+- --`start_cell`: Starting cell for logging GPU stats.
+- --`num_gpus`: The total number of GPUs in the node
+- --`sleep_time`: Sleeping time between each API call (to prevent exceeding API limits).
+- --`spreadsheet_name`: Name of the spreadsheet document.
+- --`worksheet_name`: Name of the worksheet (see bottom left).
+
 
 3. Run the monitoring using the script below
 ```sh
