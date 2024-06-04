@@ -1,0 +1,8 @@
+json_path: './service_account.json' # From google spreadsheet API
+start_cell: D8
+num_gpus: 8
+sleep_time: 600
+timezone: Asia/Seoul
+
+spreadsheet_name: VnL Lab GPUs
+worksheet_name: table
